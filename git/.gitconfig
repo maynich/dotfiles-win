@@ -1,0 +1,11 @@
+[user]
+	name = szukalski
+	email = szukalski@gmail.com
+
+[alias]
+	fu = reset HEAD --hard
+	a = add
+	aa = add -A
+	cm = commit -m
+	zcm = commit -m "zoo"
+	pm = push origin master
