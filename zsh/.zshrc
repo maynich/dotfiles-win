@@ -1,6 +1,6 @@
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="bureau"
+ZSH_THEME="agnoster"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(git docker ssh-agent tmux ubuntu)
@@ -14,3 +14,5 @@ alias gh="history|grep"
 alias zoogit="git aa && git zcm && git pm"
 
 export EDITOR='vim'
+zstyle ':completion:*' special-dirs true
+setopt globdots
