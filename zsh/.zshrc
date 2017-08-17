@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias la="ls -hal"
 alias gh="history|grep"
-alias zoogit="git aa && git zcm && git pm"
+alias zoogit="git add -A && git commit -m "zoo" && git push origin master"
 
 export EDITOR='vim'
 zstyle ':completion:*' special-dirs true
