@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cp $PWD/.gitconfig ~/.gitconfig
+ln -sf $PWD/.gitconfig ~/.gitconfig
 
 exit 0
