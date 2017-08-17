@@ -1,7 +1,5 @@
-#sudo apt-get update && sudo apt-get install -y	tmux ruby
+#!/bin/bash
 
-cp -r $PWD/.tmux* ~/
-
-#sudo gem install tmuxinator
+ln -sf $PWD/.tmux.conf ~/.tmux.conf
 
 exit 0
