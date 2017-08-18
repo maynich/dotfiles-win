@@ -6,9 +6,9 @@ ZSH_THEME="agnoster"
 zstyle :omz:plugins:ssh-agent identities id_github
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git docker ssh-agent tmux ubuntu)
+plugins=(git docker ssh-agent tmux ubuntu wakeonlan)
 
-#ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
