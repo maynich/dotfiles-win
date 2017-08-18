@@ -21,4 +21,4 @@ zstyle ':completion:*' special-dirs true
 setopt globdots
 
 # SSH Agent identities to load
-zstyle :omz:plugins:ssh-agent identities github.key
+zstyle :omz:plugins:ssh-agent identities id_github
