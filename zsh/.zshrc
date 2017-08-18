@@ -13,6 +13,12 @@ alias la="ls -hal"
 alias gh="history|grep"
 alias zoogit="git add -A && git commit -m "zoo" && git push origin master"
 
+# Editor of choice
 export EDITOR='vim'
+
+# Autocomplete subdirectories (. ..) and dotfiles
 zstyle ':completion:*' special-dirs true
 setopt globdots
+
+# SSH Agent identities to load
+zstyle :omz:plugins:ssh-agent identities github.key
