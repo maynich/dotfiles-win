@@ -4,4 +4,4 @@ Host wellington
 Host github.com
         HostName github.com
         User git
-        IdentityFile ~/.ssh/github.key
+        IdentityFile ~/.ssh/id_github
