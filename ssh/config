@@ -1,6 +1,9 @@
 Host wellington
 	HostName 192.168.0.12
 	User dave
+Host wharenui
+	HostName 192.168.0.10
+	User admin
 Host github.com
         HostName github.com
         User git
