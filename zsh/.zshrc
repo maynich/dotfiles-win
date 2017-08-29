@@ -39,3 +39,8 @@ if [[ -f $ANTIGEN/antigen.zsh ]]; then
   antigen apply
 
 fi
+
+compaudit
+if [[ $? != 0 ]]; then
+  compaudit | xargs chmod go-w
+fi
