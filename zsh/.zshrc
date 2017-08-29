@@ -6,12 +6,13 @@ ZSH_THEME="cobalt2"
 zstyle :omz:plugins:ssh-agent identities id_github
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git docker ssh-agent tmux tmuxinator ubuntu wakeonlan)
+plugins=(git docker ssh-agent tmuxinator tmux ubuntu wakeonlan)
 
 ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
+alias mux="tmuxinator"
 alias la="ls -hal"
 alias gh="history|grep"
 alias zoogit="git add -A && git commit -m "zoo" && git push origin master"
