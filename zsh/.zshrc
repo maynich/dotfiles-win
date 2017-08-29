@@ -1,6 +1,6 @@
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+ZSH_THEME="cobalt2"
 
 # SSH Agent identities to load (Must be before plugin load)
 zstyle :omz:plugins:ssh-agent identities id_github
