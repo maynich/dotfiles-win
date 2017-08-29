@@ -1,16 +1,11 @@
-export ZSH=~/.oh-my-zsh
+ANTIGEN=$HOME/.antigen/
 
-ZSH_THEME="cobalt2"
+[ -f $ANTIGEN/antigen.zsh ] || git clone https://github.com/zsh-users/antigen.git $ANTIGEN
 
 # SSH Agent identities to load (Must be before plugin load)
 zstyle :omz:plugins:ssh-agent identities id_github
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git docker ssh-agent tmuxinator tmux ubuntu wakeonlan)
-
 ZSH_TMUX_AUTOSTART=true
-
-source $ZSH/oh-my-zsh.sh
 
 alias mux="tmuxinator"
 alias la="ls -hal"
@@ -24,3 +19,23 @@ export EDITOR='vim'
 zstyle ':completion:*' special-dirs true
 setopt globdots
 
+if [[ -f $ANTIGEN/antigen.zsh ]]; then
+  source $ANTIGEN/antigen.zsh
+  antigen use oh-my-zsh
+  antigen bundle git
+  antigen bundle docker
+  antigen bundle ssh-agent
+  antigen bundle tmux
+  antigen bundle tmuxinator
+  antigen bundle ubuntu
+  antigen bundle wakeonlan
+  antigen bundle command-not-found
+  antigen bundle common-aliases
+  antigen bundle zsh-users/zsh-syntax-highlighting
+  antigen bundle zsh-users/zsh-autosuggestions
+
+  antigen theme agnoster
+
+  antigen apply
+
+fi
