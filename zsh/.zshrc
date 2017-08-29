@@ -6,7 +6,7 @@ ZSH_THEME="cobalt2"
 zstyle :omz:plugins:ssh-agent identities id_github
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git docker ssh-agent tmux ubuntu wakeonlan)
+plugins=(git docker ssh-agent tmux tmuxinator ubuntu wakeonlan)
 
 ZSH_TMUX_AUTOSTART=true
 
