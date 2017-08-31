@@ -21,6 +21,7 @@ setopt globdots
 
 if [[ -f $ANTIGEN/antigen.zsh ]]; then
   source $ANTIGEN/antigen.zsh
+  antigen selfupdate
   antigen use oh-my-zsh
   antigen bundle git
   antigen bundle docker
@@ -31,10 +32,11 @@ if [[ -f $ANTIGEN/antigen.zsh ]]; then
   antigen bundle wakeonlan
   antigen bundle command-not-found
   antigen bundle common-aliases
+  antigen bundle nmap
   antigen bundle zsh-users/zsh-syntax-highlighting
   antigen bundle zsh-users/zsh-autosuggestions
 
-  antigen theme agnoster
+  antigen theme bhilburn/powerlevel9k
 
   antigen apply
 

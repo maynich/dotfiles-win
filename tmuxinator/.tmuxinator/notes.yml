@@ -1,0 +1,9 @@
+# ~/.tmuxinator/notes.yml
+
+name: notes
+root: ~/git/documents/notes
+windows:
+  - editor:
+      panes:
+        -
+
