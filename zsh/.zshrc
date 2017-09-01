@@ -3,7 +3,7 @@ ANTIGEN=$HOME/.antigen/
 [ -f $ANTIGEN/antigen.zsh ] || git clone https://github.com/zsh-users/antigen.git $ANTIGEN
 
 # SSH Agent identities to load (Must be before plugin load)
-zstyle :omz:plugins:ssh-agent identities id_github
+zstyle :omz:plugins:ssh-agent identities id_github id_gitlab
 
 ZSH_TMUX_AUTOSTART=true
 
