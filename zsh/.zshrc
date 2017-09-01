@@ -36,7 +36,7 @@ if [[ -f $ANTIGEN/antigen.zsh ]]; then
   antigen bundle zsh-users/zsh-syntax-highlighting
   antigen bundle zsh-users/zsh-autosuggestions
 
-  antigen theme bhilburn/powerlevel9k
+  antigen theme caiogondim/bullet-train.zsh
 
   antigen apply
 
