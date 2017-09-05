@@ -1,6 +1,12 @@
 ANTIGEN=$HOME/.antigen/
 
-[ -f $ANTIGEN/antigen.zsh ] || git clone https://github.com/zsh-users/antigen.git $ANTIGEN
+if [ ! -f $ANTIGEN/antigen.zsh ]; then
+  git clone https://github.com/zsh-users/antigen.git $ANTIGEN
+  compaudit
+  if [[ $? != 0 ]]; then
+    compaudit | xargs chmod go-w
+  fi
+fi
 
 # SSH Agent identities to load (Must be before plugin load)
 zstyle :omz:plugins:ssh-agent identities id_github id_gitlab
@@ -40,9 +46,4 @@ if [[ -f $ANTIGEN/antigen.zsh ]]; then
 
   antigen apply
 
-fi
-
-compaudit
-if [[ $? != 0 ]]; then
-  compaudit | xargs chmod go-w
 fi
