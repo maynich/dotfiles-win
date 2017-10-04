@@ -1,3 +1,6 @@
+# Export Docker home if on WSL
+grep Microsoft /proc/version >> /dev/null && export DOCKER_HOST='tcp://0.0.0.0:2375'
+
 ANTIGEN=$HOME/.antigen/
 
 if [ ! -f $ANTIGEN/antigen.zsh ]; then
@@ -17,6 +20,7 @@ alias mux="tmuxinator"
 alias la="ls -hal"
 alias gh="history|grep"
 alias zoogit="git add -A && git commit -m "zoo" && git push origin master"
+alias pandoc="pandoc +RTS -V0 -RTS"
 
 # Editor of choice
 export EDITOR='vim'
