@@ -15,6 +15,7 @@ ln -sf $(pwd)/scripts/ ~/scripts/
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 ln -sf $(pwd)/ssh/config ~/.ssh/config
+chmod 700 ~/.ssh/config
 
 # tmux
 sudo apt -qq install tmux
