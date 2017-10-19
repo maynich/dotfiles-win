@@ -67,7 +67,7 @@ set_proxy() {
     PASSWORD_HEX=""
     # Read user
     echo -n User:
-    read USER
+    read USERNAME
 
     # Read Password
     echo -n Password:
@@ -79,8 +79,8 @@ set_proxy() {
     do
      PASSWORD_HEX=$PASSWORD_HEX$(printf "%%%02x" \'${PASSWORD:$i:1});
     done
-    export http_proxy="http://$USER:$PASSWORD_HEX@$PROXY"
-    USER=""
+    export http_proxy="http://$USERNAME:$PASSWORD_HEX@$PROXY"
+    USERNAME=""
     PASSWORD=""
     PASSWORD_HEX=""
 }
