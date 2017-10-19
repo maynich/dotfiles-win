@@ -21,7 +21,7 @@ alias mux="tmuxinator"
 alias la="ls -hal"
 alias gh="history|grep"
 alias zoogit="git add -A && git commit -m "zoo" && git push origin master"
-alias pandoc="pandoc +RTS -V0 -RTS"
+#alias pandoc="pandoc +RTS -V0 -RTS"
 
 # Editor of choice
 export EDITOR='vim'
@@ -55,6 +55,18 @@ fi
 
 cd ~
 
+# Convert from markdown to pdf
+convert_md_to_pdf() {
+    if [ -z "$1" ]
+        then {
+            echo "Usage: convert_md_to_pdf <filename.md>"
+            return
+        }
+    fi
+    pandoc +RTS -V0 -RTS $1 -o $(cut -d "." -f 1).pdf 
+}
+
+# Set a proxy if you need to
 set_proxy() {
     if [ -z "$1" ]
         then {
@@ -65,22 +77,28 @@ set_proxy() {
             PROXY=$1
     fi
     PASSWORD_HEX=""
+    USERNAME_HEX=""
     # Read user
     echo -n User:
-    read USERNAME
+    read USER_NAME
 
     # Read Password
     echo -n Password:
     read -s PASSWORD
     echo
 
-    # Change Password to Hex to solve any special characters
+    # Change to Hex to solve any special characters
+    #for ((i=0; i<${#USER_NAME}; i++))
+    #do
+    # USERNAME_HEX=$USERNAME_HEX$(printf "%%%02x" \'${USER_NAME:$i:1});
+    #done
     for ((i=0; i<${#PASSWORD}; i++))
     do
      PASSWORD_HEX=$PASSWORD_HEX$(printf "%%%02x" \'${PASSWORD:$i:1});
     done
-    export http_proxy="http://$USERNAME:$PASSWORD_HEX@$PROXY"
-    USERNAME=""
+    export http_proxy="http://$USER_NAME:$PASSWORD_HEX@$PROXY"
+    USER_NAME=""
+    USERNAME_HEX=""
     PASSWORD=""
     PASSWORD_HEX=""
 }

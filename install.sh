@@ -36,8 +36,8 @@ ln -sf $(pwd)/.bashrc ~/.bashrc
 wget https://github.com/szukalski/.vim/raw/master/setup.sh -O ~/vim-setup.sh
 chmod +x ~/vim-setup.sh
 
-# pandoc
-sudo apt -qq install pandoc
+# pandoc for converting md to pdf
+sudo apt -qq install pandoc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
 # Fin
 echo "Setup your ssh private keys, restart your shell login, then run ~/vim-setup.sh"
