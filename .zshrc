@@ -21,7 +21,6 @@ alias mux="tmuxinator"
 alias la="ls -hal"
 alias gh="history|grep"
 alias zoogit="git add -A && git commit -m "zoo" && git push origin master"
-#alias pandoc="pandoc +RTS -V0 -RTS"
 
 # Editor of choice
 export EDITOR='vim'
@@ -64,6 +63,17 @@ convert_md_to_pdf() {
         }
     fi
     OUTPUT_FILE=$(echo $1|cut -d "." -f 1).pdf
+    pandoc +RTS -V0 -RTS $1 -o $OUTPUT_FILE
+}
+
+convert_md_to_docx() {
+    if [ -z "$1" ]
+        then {
+            echo "Usage: convert_md_to_docx <filename.md>"
+            return
+        }
+    fi
+    OUTPUT_FILE=$(echo $1|cut -d "." -f 1).docx
     pandoc +RTS -V0 -RTS $1 -o $OUTPUT_FILE
 }
 
