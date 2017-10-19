@@ -32,3 +32,7 @@ ln -sf $(pwd)/.zshrc ~/.zshrc
 # bash (calls zsh)
 ln -sf $(pwd)/.bashrc ~/.bashrc
 
+# vim
+wget https://github.com/szukalski/.vim/raw/master/setup.sh -O ~/vim-setup.sh
+chmod +x ~/vim-setup.sh
+
