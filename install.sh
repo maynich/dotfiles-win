@@ -36,3 +36,5 @@ ln -sf $(pwd)/.bashrc ~/.bashrc
 wget https://github.com/szukalski/.vim/raw/master/setup.sh -O ~/vim-setup.sh
 chmod +x ~/vim-setup.sh
 
+# Fin
+echo "Setup your ssh private keys, restart your shell login, then run ~/vim-setup.sh"
