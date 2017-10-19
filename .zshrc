@@ -52,3 +52,5 @@ if [[ -f $ANTIGEN/antigen.zsh ]]; then
   antigen apply
 
 fi
+
+cd ~
