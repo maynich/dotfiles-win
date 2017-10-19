@@ -63,7 +63,8 @@ convert_md_to_pdf() {
             return
         }
     fi
-    pandoc +RTS -V0 -RTS $1 -o $(cut -d "." -f 1 $1).pdf 
+    OUTPUT_FILE=$(echo $1|cut -d "." -f 1).pdf
+    pandoc +RTS -V0 -RTS $1 -o $OUTPUT_FILE
 }
 
 # Set a proxy if you need to
