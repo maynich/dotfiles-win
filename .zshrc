@@ -54,3 +54,33 @@ if [[ -f $ANTIGEN/antigen.zsh ]]; then
 fi
 
 cd ~
+
+set_proxy() {
+    if [ -z "$1" ]
+        then {
+            echo "usage set_proxy <proxy_name>, maybe franpac?"
+            return
+        }
+        else
+            PROXY=$1
+    fi
+    PASSWORD_HEX=""
+    # Read user
+    echo -n User:
+    read USER
+
+    # Read Password
+    echo -n Password:
+    read -s PASSWORD
+    echo
+
+    # Change Password to Hex to solve any special characters
+    for ((i=0; i<${#PASSWORD}; i++))
+    do
+     PASSWORD_HEX=$PASSWORD_HEX$(printf "%%%02x" \'${PASSWORD:$i:1});
+    done
+    export http_proxy="http://$USER:$PASSWORD_HEX@$PROXY"
+    USER=""
+    PASSWORD=""
+    PASSWORD_HEX=""
+}

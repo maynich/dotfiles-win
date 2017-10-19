@@ -9,7 +9,7 @@ sudo apt -qq install git
 ln -sf $(pwd)/git/.gitconfig ~/.gitconfig
 
 # scripts
-ln -sf $(pwd)/scripts/ ~/scripts/
+ln -sf $(pwd)/scripts ~/scripts
 
 # ssh
 mkdir -p ~/.ssh
