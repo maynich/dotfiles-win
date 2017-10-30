@@ -36,6 +36,9 @@ ln -sf $(pwd)/.bashrc ~/.bashrc
 wget https://github.com/szukalski/.vim/raw/master/setup.sh -O ~/vim-setup.sh
 chmod +x ~/vim-setup.sh
 
+# pandoc for converting md to docs
+sudo apt -qq install pandoc
+
 # pandoc for converting md to pdf. Its a lot of large packages so install at your risk
 # sudo apt -qq install pandoc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive
 

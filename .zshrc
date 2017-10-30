@@ -54,18 +54,6 @@ fi
 
 cd ~
 
-# Convert from markdown to pdf
-convert_md_to_pdf() {
-    if [ -z "$1" ]
-        then {
-            echo "Usage: convert_md_to_pdf <filename.md>"
-            return
-        }
-    fi
-    OUTPUT_FILE=$(echo $1|cut -d "." -f 1).pdf
-    pandoc +RTS -V0 -RTS $1 -o $OUTPUT_FILE
-}
-
 convert_md_to_docx() {
     if [ -z "$1" ]
         then {
