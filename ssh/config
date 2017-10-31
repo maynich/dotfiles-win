@@ -2,7 +2,7 @@ Host wellington
 	HostName 192.168.0.12
 	User dave
 Host wharenui
-	HostName 192.168.0.10
+	HostName wharenui.home
 	User admin
 	Port 12121
 Host github.com
@@ -13,4 +13,6 @@ Host gitlab.com
 	HostName gitlab.com
 	User git
 	IdentityFile ~/.ssh/id_gitlab
-
+Host tempest
+    HostName tempest.home
+    User root
