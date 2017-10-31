@@ -13,7 +13,7 @@ if [[ $? != 0 ]]; then
 fi                            
 
 # SSH Agent identities to load (Must be before plugin load)
-zstyle :omz:plugins:ssh-agent identities id_github id_gitlab
+zstyle :omz:plugins:ssh-agent identities id_djr id_github id_gitlab
 
 ZSH_TMUX_AUTOSTART=true
 
